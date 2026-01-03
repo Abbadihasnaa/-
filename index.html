@@ -1,139 +1,216 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>لنتعارب</title>
+<meta charset="UTF-8">
+<title>لنتعارب</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-    }
+<!-- خط Tajawal -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    header {
-      background-color: #fdf6e3;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ddd;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
 
-    header nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+body {
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
 
-    header button {
-      padding: 8px 16px;
-      background-color: #f4a261;
-      border: none;
-      border-radius: 4px;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-    }
+/* الهيدر */
+.header {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
 
-    section {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
 
-    .hero {
-      text-align: center;
-      background: linear-gradient(135deg, #fef3c7, #fde68a);
-      padding: 120px 20px;
-    }
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+}
 
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
+/* الأقسام */
+.section {
+  margin: 40px auto;
+  padding: 50px 30px;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 8px;
+  text-align: center;
+}
 
-    .hero p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-    }
+/* العناوين */
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
 
-    .hero button {
-      padding: 14px 32px;
-      background-color: #f97316;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 
-    .cards {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
 
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 6px;
-      width: 250px;
-      text-align: center;
-      background-color: #fffaf0;
-    }
+p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
-    }
+/* الألوان */
+.beige { background: #fff0d6; }
+.gray  { background: #f0f0f0; }
+.blue  { background: #d9ecf7; }
+.orange{ background: #f7a440; color: white; }
+.green { background: #dff3d8; }
+.pink  { background: #f6b3b3; }
 
-    footer a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-  </style>
+/* الأزرار */
+.btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.orange-btn { background: #f7931e; color: white; }
+.dark-orange { background: #e67e22; color: white; }
+.blue-btn { background: #4a90e2; color: white; }
+.white-btn { background: white; color: #333; }
+
+/* البطاقات */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* القائمة */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* الفوتر */
+.footer {
+  background: #3a3a3a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div>لنتعارب</div>
+<header class="header">
+  <div class="logo">لنتعارب</div>
   <nav>
-    <a href="#about">عن لنتعارب</a>
-    <a href="#loanwords">الكلمات</a>
-    <a href="#challenge">التحدي</a>
+    <a href="#">الكلمات الجديدة</a>
+    <a href="#">الكلمات الدخيلة</a>
+    <a href="#">شاركنا</a>
+    <button class="btn orange-btn">ابدأ من هنا</button>
   </nav>
 </header>
 
-<section class="hero">
+<section class="section beige">
   <h1>لنتعارب… مساحة لإحياء اللغة العربية</h1>
-  <p>نحتفي بالكلمة ونقارب العربية بروح معاصرة</p>
-  <button>ابدأ من هنا</button>
+  <p>نحتفي بالكلمة ونحيي لغتنا بأسلوب معاصر.</p>
+  <button class="btn orange-btn">ابدأ من هنا</button>
 </section>
 
-<section id="loanwords">
-  <h2>كلمات دخيلة</h2>
+<section class="section gray">
+  <h2>عن لنتعارب</h2>
+  <p>رسالة الموقع وقصة قصيرة عن الهدف.</p>
+</section>
+
+<section class="section blue">
+  <h2>كلمات دخيلة نستخدمها</h2>
   <div class="cards">
-    <div class="card">أسانسير → مصعد</div>
-    <div class="card">لايك → إعجاب</div>
-    <div class="card">أوكي → حسنًا</div>
+    <div class="card">
+      <h3>ليكت</h3>
+      <p>إنجليزية – إعجاب</p>
+    </div>
+    <div class="card">
+      <h3>أوكي</h3>
+      <p>إنجليزية – حسنًا</p>
+    </div>
+    <div class="card">
+      <h3>أسانسير</h3>
+      <p>فرنسية – مصعد</p>
+    </div>
   </div>
+  <button class="btn blue-btn">عرض جميع الكلمات</button>
 </section>
 
-<footer>
-  <p>لنتعارب © 2026</p>
+<section class="section orange">
+  <h2>التحدي اللغوي لهذا الأسبوع</h2>
+  <p>استخدم كلمة "مصعد" بدل "أسانسير" في جملة.</p>
+  <button class="btn dark-orange">شارك في التحدي</button>
+</section>
+
+<section class="section green">
+  <h2>لماذا نعتني باللغة؟</h2>
+  <ul>
+    <li>⭐ لاختيار هويتنا</li>
+    <li>⭐ لنفهم التعبير</li>
+    <li>⭐ ولنستمتع بالعربية</li>
+  </ul>
+</section>
+
+<section class="section pink">
+  <h2>شاركنا</h2>
+  <p>لديك فكرة أو كلمة؟ تواصل معنا</p>
+  <button class="btn white-btn">شارك فكرتك</button>
+</section>
+
+<footer class="footer">
+  <p>لنتعارب © 2026 — مساحة عربية تهتم بالكلمة ومعناها</p>
 </footer>
 
 </body>
 </html>
+
